@@ -5,8 +5,8 @@ services:
     ports:
       - '9200:9200'
       - '9300:9300'
-    volumes:
-      - elasticsearch:/usr/share/elasticsearch/data
+#     volumes:
+#       - elasticsearch:/usr/share/elasticsearch/data
   kibana:
     image: kibana:7.3.0
     ports:
