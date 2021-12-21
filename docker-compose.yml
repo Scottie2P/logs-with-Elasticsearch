@@ -5,8 +5,6 @@ services:
     ports:
       - '9200:9200'
       - '9300:9300'
-    environment:
-      - "discovery.type=single-node"      
     volumes:
       - elasticsearch:/usr/share/elasticsearch/data
   kibana:
@@ -18,8 +16,6 @@ services:
     image: logstash:7.3.0
     ports:
       - '5000:5000'
-#       - '5044:5044'
-#       - '9600:9600'      
     depends_on:
       - elasticsearch
     volumes:
